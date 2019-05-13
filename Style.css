@@ -1,0 +1,273 @@
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+/* THIS LINE LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+/* Start your base/mobile styles here */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-size: 16px;
+    height: 100%;
+    width: 100%
+}
+
+.intro, .container {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 5px;
+    /* text-align: center; */
+}
+
+.header {
+    width: 100%;
+    /*padding: 10px;*/
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 400px;
+    height: 100%;
+}
+
+/* figure img {
+    width: 100%;
+    max-width: none;
+}
+
+figcaption {
+    color: gray;
+    /* padding-top: 5px; */
+/* padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px; */
+/* font-family: "BWHaasDingbat", "BWHaasHead", "Helvetica Neue", Helvetica, Arial, sans-serif;
+text-align: center;
+margin: 0 auto;
+max-width: 800px;
+} */
+.hide {
+    display: none;
+}
+
+.hide.active {
+    display: block;
+}
+
+.image {
+    display: block;
+    margin: 0 auto;
+    overflow: auto;
+    /*overflow: hidden;*/
+    width: 100%;
+    height: 100%;
+    /* max-height: none; */
+    background-size: cover;
+    /* background-position: top left; */
+    background-image: url(Images_Lead/lead-img.jpg);
+}
+
+/* Creates the gray overlay on top of image */
+.section-wrap {
+    overflow: auto;
+    padding: 2%;
+    width: 60%;
+    display: block;
+    margin: 10% auto 2%;
+    background-color: rgba(0, 0, 0, .5);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    color: #fff;
+    font-family: "BWHaasDingbat", "BWHaasHead", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    top: 10%;
+    left: 10%;
+}
+
+/* styling for headlines and subheads and text on landing page */
+.landing-page {
+    font-size: 2em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#character {
+    color: black;
+    font-size: 1em;
+    /* text-transform: uppercase; */
+    font-weight: 450;
+    margin: 5% auto 1%;
+    display: block;
+    padding: 10% 10%;
+    border: 1px solid black;
+    background: transparent;
+    text-align: left;
+}
+
+.billboard-text p {
+    display: block;
+    margin-top: 1%;
+    text-align: center;
+    text-transform: none;
+    font-size: 1.0em;
+    line-height: 1.5em;
+    font-weight: bold;
+    padding: 10px 0px 0px 0px;
+}
+
+input.start-btn {
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin: 5% auto 1%;
+    display: block;
+    padding: 2% 5%;
+    border: 1px solid #fff;
+    background: transparent;
+}
+
+.map {
+    max-width: none;
+    width: 100%;
+}
+
+.maphead {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3.5em;
+    text-align: center;
+    font-family: "BWHaasDingbat", "BWHaasHead", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: bolder;
+    /* padding: 0px;
+    padding-bottom: 20px; */
+    line-height: 1.25;
+    /* opacity: 1; */
+    /* max-width: 1000px; */
+}
+
+h3 {
+    font-size: 2em;
+    text-align: center;
+    font-family: "BWHaasDingbat", "BWHaasHead", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1.25;
+}
+
+h2 {
+    text-align: center;
+    font-family: "BWHaasDingbat", "BWHaasHead", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    margin-bottom: 50px;
+}
+
+p {
+    font-size: 1.25em;
+    line-height: 1.5em;
+}
+
+.style {
+    /* text-align: left; */
+    /* font-style: oblique; */
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.byline {
+    font-family: "BWHaasDingbat", "BWHaasHead", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bolder;
+}
+
+#state {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.population, .lead1 {
+    text-align: left;
+    padding: 5px;
+    font-size: 1.5em;
+    /* margin-left: 50px;
+    margin-right: 50px; */
+    font-family: sans-serif;
+    font-weight: normal;
+}
+
+.state {
+    color: black;
+    padding: 5px;
+    font-size: 1.5em;
+    text-align: left;
+    /* margin-left: 50px;
+    margin-right: 50px; */
+    text-transform: uppercase;
+    /* font-weight: bold; */
+    font-family: sans-serif;
+    margin-bottom: -10px;
+}
+
+.law {
+    padding: 5px;
+    margin-top: 5px;
+    font-size: 1em;
+    /* font-weight: bold; */
+    text-align: left;
+    /* margin-left: 50px;
+    margin-right: 50px; */
+    color: grey;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+}
+
+.population {
+    color: #EC4B26;
+}
+
+.lead1 {
+    color: #EC4B26;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+select {
+    display: block;
+    width: 100%;
+}
+
+/* Tablet/Desktop overrides */
+@media(min-width: 681px) {
+
+    /* Any adjustments for tablets and larger go here. Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+    .state {
+        flex-basis: 33%;
+    }
+
+    select {
+        width: 33%;
+    }
+
+    .image {
+        background-position: top center;
+    }
+}
+
+@media(min-width: 729px) {
+    .image {
+        background-position: top center;
+    }
+
+    /* Any adjustments for desktop and larger go here. Note these styles will be applied to anything 729px or larger -- so desktop */
+}

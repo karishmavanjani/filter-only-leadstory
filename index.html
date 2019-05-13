@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <!-- set the character set -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- first step to a responsive site -->
+    <title>HTML Skeleton</title>
+
+    <!-- FONT AWESOME -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Your styles should be called here -->
+
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <!-- -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      	<![endif]-->
+  </head>
+
+  <body>
+    <!-- YOUR CONTENT GOES HERE -->
+
+
+    <h2> Find out what percentage of children tested positive for unsafe blood lead levels in your state.</h2>
+    <div class="container">
+      <form>
+        <select id="character">
+          <option>Choose your state..</option>
+        </select>
+        <br><br>
+        <!-- <input id="enter" type="submit"> -->
+      </form>
+      <div class="Alabama">
+        <div class="state">
+          Alabama
+        </div>
+        <div class="law">
+          Alabama offers a Lead hazard Reduction Contractor Certification prgram for all persons engaged in lead-based paint activities. It's $300 for each child occupied facility plus 2% of the contract.
+        </div>
+        <div class="style">
+
+          Total Number of Children in 2016
+        </div>
+        <div class="population">
+
+          353,913
+        </div>
+        <div class="style">
+          Children With Unsafe Blood Lead Levels
+        </div>
+        <div class="lead1">
+          2%
+        </div>
+      </div>
+      <div id="favorites"></div>
+
+      <!-- templating occurs here -->
+
+      <script type="text/html" id="person_template">
+        <div class="state">
+        <%= person.state %>
+      </div>
+      <!-- <img src="<%=person.imglocation%>" /> -->
+      <div class="law">
+  <%= person.law %>
+      </div>
+
+      <div class="container">
+    <div class="style">Total Number of Children in 2016</div>
+      </div>
+
+      <div class="population">
+        <%= person.population.toLocaleString() %>
+      </div>
+      <div class="container">
+      <div class="style">Children With Unsafe Blood Lead Levels </div>
+      </div>
+
+      <div class="lead1"> <%= person.bll %> </div>
+
+    </script>
+
+
+      <script type="text/html" id="select_template">
+        <option value="<%= state %>"><%= state %></option>
+        </script>
+
+
+      <!-- the jQuery library. You need this to be able to use jQuery ($) -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <!-- Your javascript should be called here -->
+
+      <!-- link to lodash cdn -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script>
+    </div>
+
+
+    <hr>
+    </hr>
+
+
+    </div>
+    <!-- the main js file -->
+    <script src="main.js"></script>
+
+    <!-- link to data -->
+    <script src="data.js"></script>
+
+  </body>
+
+</html>
