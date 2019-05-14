@@ -30,7 +30,6 @@
     <!-- YOUR CONTENT GOES HERE -->
 
 
-    <h2> Find out what percentage of children tested positive for unsafe blood lead levels in your state.</h2>
     <div class="container">
       <form>
         <select id="character">
@@ -41,24 +40,23 @@
       </form>
       <div class="Alabama">
         <div class="state">
-          Alabama
+          United States of America
         </div>
         <div class="law">
-          Alabama offers a Lead hazard Reduction Contractor Certification prgram for all persons engaged in lead-based paint activities. It's $300 for each child occupied facility plus 2% of the contract.
-        </div>
+          The President's task Force on Environmental Health Risks and Safety Risks to Children recently released an action plan to help various federal agencies in their efforts to protect children from lead exposure </div>
         <div class="style">
 
           Total Number of Children in 2016
         </div>
         <div class="population">
 
-          353,913
+          24,193,364
         </div>
         <div class="style">
-          Children With Unsafe Blood Lead Levels
+          Children Tested for Unsafe Blood Lead Levels
         </div>
         <div class="lead1">
-          2%
+          10%
         </div>
       </div>
       <div id="favorites"></div>
@@ -82,10 +80,10 @@
         <%= person.population.toLocaleString() %>
       </div>
       <div class="container">
-      <div class="style">Children With Unsafe Blood Lead Levels </div>
+      <div class="style">Children Tested for Unsafe Blood Lead Levels</div>
       </div>
 
-      <div class="lead1"> <%= person.bll %> </div>
+      <div class="lead1"> <%= person.percentage_tested %> </div>
 
     </script>
 
