@@ -104,7 +104,7 @@ max-width: 800px;
     font-weight: 450;
     margin: 5% auto 1%;
     display: block;
-    padding: 10% 10%;
+    /* padding: 10% 10%; */
     border: 1px solid black;
     background: transparent;
     text-align: left;
