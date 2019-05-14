@@ -312,11 +312,5 @@ let data = [
 		"population": "46,017",
 		"percentage_tested": "No available data",
 		"law": "Has an awareness program for lead poisoning prevention but does not require testing or reporting on blood lead levels in children"
-  },
-	{
-		"state": "United States of America",
-		"population": "24,193,364",
-		"percentage_tested": "0%",
-		"law": "The President's task Force on Environmental Health Risks and Safety Risks to Children recently released an action plan to help various federal agencies in their efforts to protect children from lead exposure"
   }
 ];
